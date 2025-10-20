@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Page Split</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="h-screen flex overflow-hidden">
+
+
+  <div class="w-full md:w-1/2 flex flex-col justify-center items-center px-8 md:px-16 bg-white">
+    <div class="max-w-sm w-full space-y-6">
+       
+        <div class="flex justify-center">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-audio-lines-icon lucide-audio-lines"><path d="M2 10v3"/><path d="M6 6v11"/><path d="M10 3v18"/><path d="M14 8v7"/><path d="M18 5v13"/><path d="M22 10v3"/>
+      </svg>
+      <span class="text-black ml-4 mt-1">flux</span>
+     
+      
+        </div>
+
+     
+      <h2 class="text-2xl font-semibold text-gray-800 text-center">Welcome back</h2>
+      
+      <div class="flex flex-col space-y-3">
+        <button class="flex items-center justify-center gap-2 border border-gray-300 rounded-md py-2 hover:bg-gray-50">
+          <img src="https://www.svgrepo.com/show/475656/google-color.svg" class="w-5 h-5" />
+          Continue with Google
+        </button>
+        <button class="flex items-center justify-center gap-2 border border-gray-300 rounded-md py-2 hover:bg-gray-50">
+          <img src="https://www.svgrepo.com/show/349375/github.svg" class="w-5 h-5" />
+          Continue with GitHub
+        </button>
+      </div>
+
+      <div class="flex items-center justify-center space-x-2">
+        <div class="border-t border-gray-300 w-1/3"></div>
+        <span class="text-sm text-gray-400">or</span>
+        <div class="border-t border-gray-300 w-1/3"></div>
+      </div>
+
+      <form class="space-y-4">
+        <div>
+          <label for="email" class="text-sm font-medium text-gray-700">Email</label>
+          <input type="email" id="email" placeholder="email@example.com" class="w-full mt-1 px-3 py-2 border rounded-md focus:ring-2 focus:ring-indigo-500 focus:outline-none" />
+        </div>
+
+        <div>
+          <label for="password" class="text-sm font-medium text-gray-700">Password</label>
+          <input type="password" id="password" placeholder="Your password" class="w-full mt-1 px-3 py-2 border rounded-md focus:ring-2 focus:ring-indigo-500 focus:outline-none" />
+          <div class="text-right mt-1">
+            <a href="#" class="text-sm text-gray-500 hover:underline">Forgot password?</a>
+          </div>
+        </div>
+
+        <div class="flex items-center space-x-2">
+          <input type="checkbox" id="remember" class="rounded border-gray-300">
+          <label for="remember" class="text-sm text-black font-bold">Remember me for 30 days</label>
+        </div>
+
+        <button type="submit" class="w-full bg-gray-900 text-white py-2 rounded-md hover:bg-gray-800">Log in</button>
+
+        <p class="text-center text-sm text-gray-500">
+          First time around here?
+          <a href="#" class="text-gray-500 hover:underline">Sign up for free</a>
+        </p>
+      </form>
+    </div>
+  </div>
+
+
+  <div class="hidden md:flex w-1/2 bg-cover bg-center relative">
+    <img src="https://i.pinimg.com/1200x/24/4c/96/244c9605212e34e3fdc37534df96776d.jpg" alt="Background Image" class="absolute inset-0 w-full h-full object-cover" />
+    <div class="absolute"></div>
+
+    <div class="absolute bottom-12 left-12 text-white max-w-md">
+      <h3 class="text-lg px-3 py-1 rounded-lg font-semibold mb-3">★★★★★</h3>
+      <p class="text-xl italic mb-4">
+        “Flux has enabled me to design, build, and deliver apps faster than ever before.”
+      </p>
+      <div class="flex items-center gap-3">
+        <img src="https://media.licdn.com/dms/image/v2/D4E03AQFkIkqXvo8Fzw/profile-displayphoto-crop_800_800/B4EZfFdapwG4AM-/0/1751364513045?e=1762992000&v=beta&t=XD9xOs_x_H8VpizQX_v5fkIGaiFQRUaRT0zJybUHUMw" alt="User avatar" class="w-10 h-10 rounded-full">
+        <div>
+          <p class="font-medium">Maya</p>
+          <p class="text-sm text-gray-300">Creator of Chaos</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

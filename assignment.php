@@ -15,9 +15,8 @@ $fullname = $firstname . $lastname;
 echo "<p>$fullname</p>";
 //3.
 $x = 3.14;
-$type = gettype($x);
+echo gettype($x);
 
-echo $type;
 //4.
 $number = "42";
 $integer_number = (int) $number + 8;
@@ -35,11 +34,36 @@ if ($score >= 90) {
 } elseif ($score = 60-89) {
     echo "Dobře";
 } else {
-    echo "Zkus to znovu";
+    echo "Zkus to znovu"; //tohle echo mi nefunguje :(
 }
 //7.
+echo "<p></p>";
+$number_2 = 36;
 
+if ($number_2 % 2 == 0) {
+    echo "$number_2 je sudé";
+} else {
+    echo "$number_2 je liché";
+}
+//8.
+echo "<p></p>";
+if (str_starts_with($name, "A")) {
+    echo "Jméno začíná písmenem A.";
+} else {
+    echo "Jméno nezačíná písmenem A.";
+}
+//9.
+echo "<p></p>";
+$loggedIn = false;
 
+echo $loggedIn ? "Přihlášen" : "Odhlášen";
+//10.
+echo "<p></p>";
+$items = [];
+
+if (empty($items)) {
+    echo "Žádné položky";
+} 
 
 //funkce
 //11.
@@ -49,13 +73,22 @@ echo "Ahoj, $name!";
 }
 greet ("Maya");
 //12.
-//funkce add neexistuje
+//funkce add neexistuje -> k sečtení dvou čísel použijeme operátor +
 echo "<p></p>";
 $a = 8;
 $b = 7;
 $sum = $a + $b;
 echo $sum;
 //13.
+echo "<p></p>";
+function isEven($num) {
+    return $num % 2 === 0;
+}
+
+var_dump(isEven(4)); 
+var_dump(isEven(7)); 
+
+
 //14.
 echo "<p></p>";
 function average($pole) {
@@ -73,6 +106,14 @@ $average = average($numbers);
 echo "Průměr pole je: " . $average;
 //15.
 echo "<p></p>";
+function countVowels($string) {
+ preg_match_all('/[aeiouAEIOU]/', $string, $matches);
+ return count($matches[0]);
+}
+echo countVowels("Denisa");
+echo "\n";
+echo countVowels("Maya");
+
 
 //stringy
 //16.
@@ -148,6 +189,48 @@ $numbers_3 = [9, 3, 5, 1];
 sort($numbers_3);
 print_r($numbers_3);
 
-//logické a algoritmické funkce 
+//logické a algoritmické funkce -> u těchto funkcí jsem nevěděla -> práce chatgpt
+//26.
 echo "<p></p>";
-$words = ["dovolená", "ryba", "kočka", "tužka"];
+$words = ["dovolená", "abrakadabra", "kočka", "tužka"];
+$words_length = array_map('strlen', $words);
+$max_lenght = max($words_length);
+$index_longest = array_search($max_lenght, $words_length);
+$longest_word = $words[$index_longest];
+
+echo "The longest word is " . $longest_word;
+//27.
+echo "<p></p>";
+function sumEvenNumbers($numbers) {
+    $evenNumbers = array_filter($numbers, fn($n) => $n % 2 === 0);
+
+    return array_sum($evenNumbers);
+}
+
+echo sumEvenNumbers([1, 2, 3, 4, 5, 6]);
+//28.
+echo "<p></p>";
+function reverseWords($sentence) {
+     $words = explode(' ', $sentence);
+     $reversed = array_reverse($words);
+     return implode(' ', $reversed);
+}
+
+echo reverseWords("Hi, how are you");
+//29.
+echo "<p></p>";
+function hasDuplicates($array) {
+      return count($array) !== count(array_unique($array));
+
+}
+var_dump(hasDuplicates([1, 2, 3, 4]));
+var_dump(hasDuplicates([1, 2, 3, 2]));
+//30.
+echo "<p></p>";
+function uniqueLetters($string) {
+    $string = strtolower(str_ireplace(' ', '', $string));
+    $letters = str_split($string);
+    $unique = array_unique($letters);
+    return array_values($unique);
+}
+print_r(uniqueLetters("Hello yellow"));

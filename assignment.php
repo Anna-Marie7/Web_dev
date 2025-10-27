@@ -93,6 +93,17 @@ function isEven($num) {
 
 var_dump(isEven(4)); 
 var_dump(isEven(7)); 
+//další možnost
+echo "<p></p>";
+function isOdd($num) {
+    return $num % 2 == 0;
+}
+
+if (isOdd(7)) {
+    echo "Číslo je sudé.";
+} else {
+    echo "Číslo je liché.";
+}
 
 
 //14.

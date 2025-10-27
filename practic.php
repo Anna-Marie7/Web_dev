@@ -127,3 +127,11 @@ function substract($a, $b) {
     return $a - $b;
 }
 echo substract(100, 88);
+
+echo "<p></p>";
+function isEven($num) {
+    return $num % 2 === 0;
+}
+
+var_dump(isEven(4)); 
+var_dump(isEven(7)); 

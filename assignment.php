@@ -73,12 +73,18 @@ echo "Ahoj, $name!";
 }
 greet ("Maya");
 //12.
-//funkce add neexistuje -> k sečtení dvou čísel použijeme operátor +
+//funkce add neexistuje...haha blbě jsem to pochopila -> k sečtení dvou čísel použijeme operátor +
 echo "<p></p>";
 $a = 8;
 $b = 7;
 $sum = $a + $b;
 echo $sum;
+//ještě jednou pomocí funkce:
+echo "<p></p>";
+function add($a, $b) {
+    return $a + $b;
+}
+echo add(77, 3);
 //13.
 echo "<p></p>";
 function isEven($num) {
